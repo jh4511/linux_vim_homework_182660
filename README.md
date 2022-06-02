@@ -74,7 +74,9 @@
     + 새로운 애플리케이션을 시작할 수 있는 메모리 양
     + swap 메모리를 사용하지 않고 사용할 수 있는 메모리의 크기
 + _디테일 영역_
-  ![top사진2](https://user-images.githubusercontent.com/86704634/171556081-307a7c93-0593-410f-aa56-d3521c3f252a.PNG)
+
+  <img src="https://user-images.githubusercontent.com/86704634/171556081-307a7c93-0593-410f-aa56-d3521c3f252a.PNG" width="70%" height="70%"/>
+  
   + PID : __프로세스 ID__, 프로세스를 구분하기 위한 겹치지 않은 고유한 값
   + USER : 프로세스를 실행한 USER 이름
   + PR & NI
@@ -118,7 +120,7 @@
    + R: 오름차순과 내림차순을 토글 변경하는 단축키
 + H : 쓰레드(thread)를 기준으로 보여주는 방식
   + 요약의 Tasks영역과 디테일 영역이 변경된다.
-  ![Inkedtop사진3_LI](https://user-images.githubusercontent.com/86704634/171560993-94ff5c03-b428-4682-ad88-c7d55fca6b0d.jpg)
+  <img src="https://user-images.githubusercontent.com/86704634/171560993-94ff5c03-b428-4682-ad88-c7d55fca6b0d.jpg" width="80%" height="80%"/>
 + 필터링 기능 (o(알파벳) 또는 O(알파벳)) : COMMAND, %CPU 등등 다양한 방법으로 가능
 
 5) __top과 ps의 차이점__
@@ -127,13 +129,55 @@
 ***
 ### 2) ps 명령어
 1) __ps 명령어란?__
-+ 현재 실행중인 프로세스 목록과 상태를 보여준다. (process status의 줄임말)
++ ***현재 실행중인 프로세스 목록과 상태***를 보여준다. (process status의 줄임말)
 + ps 명령어의 옵션은 각 시스템 계열 System V(-), BSD(-사용안함), GNU(--)마다 다른 표기법 및 출력을 가지고 있음.
 + 프로세스가 정상적인지 확인하거나 비정상적인 프로세스가 올라왔는지 확인 하는 등 리눅스 관리 전반적으로 많이 사용되는 명령어임.
 + 주로 파이프라인, grep명령어와 함께 사용하여 특정 프로세스를 확인하는데 많이 사용함.
 2) __기본 구성__ (ps 명령어만 쳤을 때)
+  
+  ![ps명령어기본](https://user-images.githubusercontent.com/86704634/171623379-c3d31167-0523-4182-8dfb-0d9b8758b199.PNG)
++ PID: 프로세스의 ID번호(식별번호)
++ TTY: 프로세스가 수행중인 터미널(프로세스가 연결된 터미널)
++ TIME: 총 CPU 사용시간
++ CMD: 실제 프로세스의 내용(실행 명령행)
+3) __PS 항목정리__ (기본으로는 명령어 혼자치면 2번처럼 뜨지만, 옵션에 따라 더 자세한 내용을 알려주기 때문에 정리함)
+
+|항목|의미|
+|:---:|:---:|
+|USER|BSD계열에서 나타나는 항목으로 프로세스 소유자의 이름|
+|UID|SYSTEM V계열에서 나타나는 항목으로 프로세스 소유자의 이름|
+|PPID|부모 프로세스 ID|
+|%CPU|CPU 사용 비율의 추정치(BSD)|
+|%MEM|메모리 사용 비율의 추정치(BSD)|
+|VSZ|K단위 또는 페이지 단위의 가상메모리 사용량|
+|RSS|실제 메모리 사용량(Resident Set Size)|
+|S, STAT|현재 프로세스의 상태 코드(S:Sys V, STAT:BSD)|
+|STIME|프로세스가 시작된 시간 혹은 날짜|
+|C, CP|짧은 기간 동안의 CPU 사용률(C: Sys V, CP:BSD)|
+|F|프로세스의 플래그|
+|PRI|실제 실행 우선순위|
+|NI|nice 우선순위 번호|
+4) __주요 옵션__
+
+|옵션|설명|
+|:---:|:---:|
+|-e|시스템 전체 프로세스를 보여준다.|
+|-l|상세한 정보를 보여줌(긴 포멧으로 보여준다.)|
+|-f|풀 포맷으로 보여준다.(UID, PID 등)|
+|p, -p|특정 PID의 프로세스를 보여준다.|
+|-u|특정 사용자의 프로세스를 보여준다|
+
++ `ps -f` (풀 포맷으로 출력한 사진)
+
+![ps명령어옵션f](https://user-images.githubusercontent.com/86704634/171628664-67aa82a7-1916-46d3-8e2e-5b6722ef5f98.PNG)
+
++ `ps -l` (긴 포맷으로 출력한 사진)
+
+<img src="https://user-images.githubusercontent.com/86704634/171629245-fe03360a-a187-486d-84b9-c0b096dd87bd.PNG" width="70%" height="70%"/>
+
+5) __그 외의 옵션들 정리__
+6) 
  
-4) 
 ---
 ### 3) jobs 명령어
 ***
@@ -152,8 +196,9 @@
 - [리눅스 ps명령어 사전, 네이버 지식백과](https://terms.naver.com/entry.naver?docId=4125773&cid=59321&categoryId=59321)
 - <https://arer.tistory.com/150>
 - <https://newstars.cloud/468>
-- (https://blog.naver.com/dktmrorl/222416977486 "거의 요약")
-- https://reakwon.tistory.com/183
+- [네이버블로그-요약](https://blog.naver.com/dktmrorl/222416977486 "ps명령어 요약")
+- <https://reakwon.tistory.com/183>
+- <https://jhnyang.tistory.com/268>
 3) jobs 명령어 자료
 4) kill 명령어 자료
 5) 매크로 사용방법 자료
