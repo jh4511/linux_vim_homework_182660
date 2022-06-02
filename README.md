@@ -126,6 +126,14 @@
 - ps는 ps한 시점에 proc에서 검색한 ***cpu 사용량***을 출력한다.
 ***
 ### 2) ps 명령어
+1) __ps 명령어란?__
++ 현재 실행중인 프로세스 목록과 상태를 보여준다. (process status의 줄임말)
++ ps 명령어의 옵션은 각 시스템 계열 System V(-), BSD(-사용안함), GNU(--)마다 다른 표기법 및 출력을 가지고 있음.
++ 프로세스가 정상적인지 확인하거나 비정상적인 프로세스가 올라왔는지 확인 하는 등 리눅스 관리 전반적으로 많이 사용되는 명령어임.
++ 주로 파이프라인, grep명령어와 함께 사용하여 특정 프로세스를 확인하는데 많이 사용함.
+2) __기본 구성__ (ps 명령어만 쳤을 때)
+ 
+4) 
 ---
 ### 3) jobs 명령어
 ***
@@ -141,3 +149,11 @@
 - <https://blog.naver.com/dktmrorl/222635202537>
 - [네이버 지식백과](https://terms.naver.com/entry.naver?docId=4125861&cid=59321&categoryId=59321 "top용어사전")
 2) ps 명령어 자료
+- [리눅스 ps명령어 사전, 네이버 지식백과](https://terms.naver.com/entry.naver?docId=4125773&cid=59321&categoryId=59321)
+- <https://arer.tistory.com/150>
+- <https://newstars.cloud/468>
+- (https://blog.naver.com/dktmrorl/222416977486 "거의 요약")
+- https://reakwon.tistory.com/183
+3) jobs 명령어 자료
+4) kill 명령어 자료
+5) 매크로 사용방법 자료
