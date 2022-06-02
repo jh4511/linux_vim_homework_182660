@@ -110,6 +110,17 @@
 |b|Batch 모드로 작동|
 |1|CPU Core별로 사용량 보여줌|
 
++ 디테일 영역 - 원하는 값을 기준으로 정렬하는 방법
+   + M: 메모리 usage에 의한 정렬
+   + P: CPU usage에 의한 정렬
+   + N: 프로세스 ID에 따른 정렬
+   + T: running time에 의한 정렬
+   + R: 오름차순과 내림차순을 토글 변경하는 단축키
++ H : 쓰레드(thread)를 기준으로 보여주는 방식
+  + 요약의 Tasks영역과 디테일 영역이 변경된다.
+  ![Inkedtop사진3_LI](https://user-images.githubusercontent.com/86704634/171560993-94ff5c03-b428-4682-ad88-c7d55fca6b0d.jpg)
++ 필터링 기능 (o(알파벳) 또는 O(알파벳)) : COMMAND, %CPU 등등 다양한 방법으로 가능
+
 5) __top과 ps의 차이점__
 - top은 proc에서 일정 주기로 합산해 ***cpu 사용율***을 출력한다.
 - ps는 ps한 시점에 proc에서 검색한 ***cpu 사용량***을 출력한다.
