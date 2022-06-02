@@ -13,13 +13,15 @@
 + 메모리사용현황
 + 스왑메모리 사용현황
 + 모든 프로세스들의 자원현황
+
 2) __top명령어와 같이 사용하는 옵션(2개)__
 + `-b` : 순간의 정보를 확인(batch모드)
   + 예시: `top -b`
 + `-n` : top 실행 주기 설정(반복 횟수) 
   + 예시: `top -n 2` ( top의 실행 주기를 2번 반복한다.)
+
 3) __top 명령어를 실행 했을 때의 화면 해석__
-![top사진](https://user-images.githubusercontent.com/86704634/171450513-ffc8826e-33b5-4eb2-a69f-4b7e8c7b708a.png)
+  ![top사진](https://user-images.githubusercontent.com/86704634/171450513-ffc8826e-33b5-4eb2-a69f-4b7e8c7b708a.png)
 + _서버정보_
   + top - 16:58:55 (시스템 현재시간)
     + 현재 서버의 시간이 16시 58분 55초
@@ -62,6 +64,39 @@
   |st|CPU를 VM에서 사용하여 대기하는 CPU 비율|
   
 + _메모리 사용량_
+  + Mem : Ram의 메모리 영역
+  + Swap : 디스크를 메모리처럼 이용하는 Swap 메모리 영역, 일반적으로 Mem의 사용량이 거의 가득 찼을때 이 메모리 영역을 사용한다. (디스크이기 때문에 RAM 메모리보다 속도가 많이 느리다.)
+  + total: 총 메모리 양 / free : 사용가능한 메모리 양 / used : 사용중인 메모리 양
+  + buff/cache : __IO와 관련되어 사용되는 버퍼에 사용되는 메모리__
+    + buff는 buffers의 약자, 이 값은 커널 버퍼에서 사용되는 메모리
+    + cache는 disk의 페이지 캐시
+  + avail Mem
+    + 새로운 애플리케이션을 시작할 수 있는 메모리 양
+    + swap 메모리를 사용하지 않고 사용할 수 있는 메모리의 크기
++ _디테일 영역_
+  ![top사진2](https://user-images.githubusercontent.com/86704634/171556081-307a7c93-0593-410f-aa56-d3521c3f252a.PNG)
+  + PID : __프로세스 ID__, 프로세스를 구분하기 위한 겹치지 않은 고유한 값
+  + USER : 프로세스를 실행한 USER 이름
+  + PR & NI
+    + PR: 커널에 의해서 스케줄링 되는 우선 순위
+    + NI: PR에 영향을 주는 nice라는 값, 낮을수록 우선순위가 높음
+  + VIRT, RES, SHR, %MEM: 프로세스 메모리와 관련
+  
+  |이름|설명|
+  |:---:|:---:|
+  |VIRT|프로세스가 소비하고 있는 총 메모리(가상메모리 전체용량, swap + res)|
+  |RES|RAM에서 사용중인 메모리의 크기, 실제로 메모리를 쓰고 있는 여기가 핵심|
+  |SHR|다른 프로세스와의 공유메모리를 나타냄, 예시: 라이브러리|
+  |%MEM|RAM에서 RES가 차지하는 비율, 프로세스가 사용하는 메모리의 사용률|
+  + %CPU : 프로세스가 사용하는 CPU의 사용률
+  + S : 프로세스의 현재 상태
+    + S: Sleeping(요청한 리소스 즉시 사용가능), R: Running(실행중, CPU자원소모)
+    + W: sWapped out process, Z: Zombies
+    + D: Uninterruptiable sleep (디스크 혹은 네트워크 I/O를 대기)
+    + T: Traced or Stopped (보통의 시스템에서 자주 볼 수 없는 상태)
+  + TIME+ : 프로세스가 사용한 토탈 CPU 시간
+  + COMMAND : 실행된 명령어
+  
 4) __top 실행 후 명령어__
 
 |단축키|설명|
