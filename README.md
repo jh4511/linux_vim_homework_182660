@@ -236,7 +236,7 @@
 
 ![ka38_149_i3](https://user-images.githubusercontent.com/86704634/171862657-9e7d511c-c59a-417e-b208-d6bce7408fd7.jpg)
 
-+ v로 시작하는 모든 프로세스 ID를 확인하는 방법: jobs -p %b
++ v로 시작하는 모든 프로세스 ID를 확인하는 방법: `jobs -p %b`
 
 ![ka38_149_i4](https://user-images.githubusercontent.com/86704634/171862898-94a67ce7-aeb1-42db-b0a9-424eaf22c248.jpg)
 
@@ -256,6 +256,14 @@
 ***
 ### 4) kill 명령어
 1) __kill 명령어란?__
++ 프로세스에 특정한 signal을 보내는 명령어
++ 일반적으로 종료되지 않는 프로세스를 종료 시킬 때 많이 사용한다.
+
+2) __사용하는 방법__
++ `kill [옵션 or 시그널(번호 또는 이름)] PID`
+
+
+
 ## vim 에디터
 ### 1) 매크로 사용방법(q, @)
 
@@ -277,4 +285,7 @@
 - <https://starrykss.tistory.com/1694>
 - <https://hbase.tistory.com/265>
 4) kill 명령어 자료
+- [리눅스 명령어 사전 kill - 네이버 지식백과](https://terms.naver.com/entry.naver?docId=4125687&cid=59321&categoryId=59321)
+- https://bigsun84.tistory.com/355
+- https://sisiblog.tistory.com/209
 5) 매크로 사용방법 자료
