@@ -271,7 +271,36 @@
 |-1,|-HUP 프로세스를 재활성화한다.|
 |-9|프로세스를 강젲로 종료시킨다.|
 
++ -s 명령어를 이용해 여러가지 시그널을 보낼 수 있는데, kill 명령어의 default 시그널은 TERM(15) 이다.
+  + 시그널을 보내는 방법 예시
+    + `kill -s KILL [pid]`
+    + `kill -s SIGKILL [pid]`
+    + `kill -s 9 [pid]`
+    + `kill -9 [pid]` (주로 이 방법을 많이 사용한다. 프로그램 죽이기)
 
+4) __사용 가능한 시그널의 목록__ (-l 옵션을 통해 확인할 수 있음)
++ 아래는 내 컴퓨터에 사용할 수 있는 시그널의 목록들이다. (운영체제 환경마다 시그널 목록이 다르게 보여진다.)
++ Window 환경의 시그널
+<img src="https://user-images.githubusercontent.com/86704634/171966315-70620ed4-f1b1-40bf-8cff-e1c08ce58a35.PNG" width="70%" height="70%"/>
+
++ *핵심 몇개만 설명한 시그널 표*
+
+|시그널|설명|시그널|설명|
+|:---:|:---:|:---:|:---:|
+|1.SIGHUP|연결 끊기, 프로세스의 설정파일을 다시 읽음|2.SIGINT|인터럽트|
+|3.SIGQUIT|종료|4.SIGILL|잘못된 명령|
+|5.SIGTRAP|트렙 추적|7.SIGBUT|버스 에러|
+|8.SIGFPE|고정소수점 예외|9.SIGKILL|죽이기|
+|11.SIGSEGV|세그멘테이션 위반|13.SIGPIPE|읽을 것이 없는 파이프에 대한 시그널|
+|14.SIGALRM|경고 클럭|15.SIGTERM|소프트웨어 종료시그널|
+|16.SIGSTKFLT|프로세서 스택 실패|17.SIGCHLD|자식 프로세서의 상태변화|
+|18.SIGCONT|STOP 시그널 이후 계속 진행할 때 사용|19.SIGSTOP|정지|
+|20.SIGTSTP|키보드에 의해 발생하는 시그널|
+
++ 블로그 글 (OSX에서 실행한 화면) - 출처는 맨아래 참고자료 사이트에 적어져 있음.
+<img width="410" alt="99E84B455C6378A109" src="https://user-images.githubusercontent.com/86704634/171966499-dcada309-56af-483e-9303-e5dabbe07b35.png">
+
+***
 ## vim 에디터
 ### 1) 매크로 사용방법(q, @)
 
