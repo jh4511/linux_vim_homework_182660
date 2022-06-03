@@ -326,3 +326,6 @@
 - https://bigsun84.tistory.com/355
 - https://sisiblog.tistory.com/209
 5) 매크로 사용방법 자료
+- https://stdout.tistory.com/46
+- https://forcecore.tistory.com/1255
+- https://booolean.tistory.com/849
