@@ -120,6 +120,7 @@
    + R: 오름차순과 내림차순을 토글 변경하는 단축키
 + H : 쓰레드(thread)를 기준으로 보여주는 방식
   + 요약의 Tasks영역과 디테일 영역이 변경된다.
+  
   <img src="https://user-images.githubusercontent.com/86704634/171560993-94ff5c03-b428-4682-ad88-c7d55fca6b0d.jpg" width="80%" height="80%"/>
 + 필터링 기능 (o(알파벳) 또는 O(알파벳)) : COMMAND, %CPU 등등 다양한 방법으로 가능
 
@@ -216,7 +217,39 @@
 ---
 ### 3) jobs 명령어
 1) __jobs 명령어란?__
-2)
++ 현재 세션의 _작업 상태_를 출력한다. (프로세스 목록을 출력해주는 명령)
+  + 백그라운드로 실행중인 프로세스, 현재 중지된 프로세스, 변경 되었지만 보고되지 않은 상태 등을 표시한다.
+  ![ka38_149_i2](https://user-images.githubusercontent.com/86704634/171856378-dfef3d04-8791-47aa-af46-ea5196efeefd.jpg)
+
++ 사용법 : `jobs [option]`
+
+2) __옵션__
+
+|옵션|설명|
+|:---:|:---:|
+|-l|프로세스 그룹 ID를 state 필드 앞에 출력한다.|
+|-n|프로세스 그룹 중에 대표 프로세스 ID를 출력한다.|
+|-p|각 프로세스 ID에 대해 한 행씩 출력한다.|
+|command|지정한 명령어를 실행한다.|
+
++ `jobs -l`일 경우 사진(state 필드 앞에 프로세스 ID 출력)
+![ka38_149_i3](https://user-images.githubusercontent.com/86704634/171862657-9e7d511c-c59a-417e-b208-d6bce7408fd7.jpg)
+
++ v로 시작하는 모든 프로세스 ID를 확인하는 방법: jobs -p %b
+![ka38_149_i4](https://user-images.githubusercontent.com/86704634/171862898-94a67ce7-aeb1-42db-b0a9-424eaf22c248.jpg)
+
+3) __jobs 명령어로 확인할 수 있는 세션의 상태값__
+|상태|설명|
+|:---:|:---:|
+|Running|작업이 일시 중단되지 않았고 종료하지 않고 계속 진행 중임을 뜻한다.|
+|Done|작업이 완료되어 0을 반환하고 종료했음을 뜻한다.|
+|Done (code)|작업이 정상적으로 완료했으며, 0이 아닌 코드를 반환했음을 뜻한다.|
+|Stopped|작업이 일시 중단됨을 뜻한다.|
+|Stopped (SIGTSTP)|SIGTSTP 신호가 작업을 일시 중단했음을 뜻한다.|
+|Stopped (SIGSTOP)|SIGSTOP 신호가 일시 중단했음을 뜻한다.|
+|Stopped (SIGTTIN)|SIGTTIN 신호가 작업을 일시 중단했음을 뜻한다.|
+|Stopped (SIGTTOU)|SIGTTOU 신호가 작업을 일시 중단했음을 뜻한다.|
+
 ***
 ### 4) kill 명령어
 1) __kill 명령어란?__
@@ -240,6 +273,5 @@
 - [리눅스 명령어사전 jobs - 네이버 지식백과](https://terms.naver.com/entry.naver?docId=4125682&cid=59321&categoryId=59321)
 - <https://starrykss.tistory.com/1694>
 - <https://hbase.tistory.com/265>
-- 
 4) kill 명령어 자료
 5) 매크로 사용방법 자료
