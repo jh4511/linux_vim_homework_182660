@@ -233,12 +233,15 @@
 |command|지정한 명령어를 실행한다.|
 
 + `jobs -l`일 경우 사진(state 필드 앞에 프로세스 ID 출력)
+
 ![ka38_149_i3](https://user-images.githubusercontent.com/86704634/171862657-9e7d511c-c59a-417e-b208-d6bce7408fd7.jpg)
 
 + v로 시작하는 모든 프로세스 ID를 확인하는 방법: jobs -p %b
+
 ![ka38_149_i4](https://user-images.githubusercontent.com/86704634/171862898-94a67ce7-aeb1-42db-b0a9-424eaf22c248.jpg)
 
 3) __jobs 명령어로 확인할 수 있는 세션의 상태값__
+
 |상태|설명|
 |:---:|:---:|
 |Running|작업이 일시 중단되지 않았고 종료하지 않고 계속 진행 중임을 뜻한다.|
