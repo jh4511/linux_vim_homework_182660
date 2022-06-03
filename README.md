@@ -215,9 +215,11 @@
 + `ps -fp[PID]` : PID를 키워드로 프로세스 정보를 확인하는 방법이다.
 ---
 ### 3) jobs 명령어
+1) __jobs 명령어란?__
+2)
 ***
 ### 4) kill 명령어
-
+1) __kill 명령어란?__
 ## vim 에디터
 ### 1) 매크로 사용방법(q, @)
 
@@ -235,5 +237,9 @@
 - <https://reakwon.tistory.com/183>
 - <https://jhnyang.tistory.com/268>
 3) jobs 명령어 자료
+- [리눅스 명령어사전 jobs - 네이버 지식백과](https://terms.naver.com/entry.naver?docId=4125682&cid=59321&categoryId=59321)
+- <https://starrykss.tistory.com/1694>
+- <https://hbase.tistory.com/265>
+- 
 4) kill 명령어 자료
 5) 매크로 사용방법 자료
